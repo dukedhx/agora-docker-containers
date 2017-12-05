@@ -11,26 +11,26 @@
 
 
 - **Containers**
-	* agora-recording-linux
+	* [agora-recording-linux](https://pan.baidu.com/s/1c15m4Oo)
 	
 			CentOS 6.6, C Dev Tools, Agora Recording SDK and its compiled executable
 		 
-	* agora-livebroadcast-nodejs
+	* [agora-livebroadcast-nodejs](https://pan.baidu.com/s/1o7DF31C)
 	
 			Node.js, Express.js, Agora WebRTC SDK, WebRTC Live Broadcast Demo
 			
-	* agora-webrtc-nginx
+	* [agora-webrtc-nginx](https://pan.baidu.com/s/1hss3nrI)
 	
 			Nginx, Agora WebRTC SDK, WebRTC Communication Demo
 
 - **Prerequisites**:
 	* Install [Docker](https://www.htpcbeginner.com/what-is-docker-docker-vs-virtualbox/) for [Windows](https://docs.docker.com/docker-for-windows/#shared-drives-on-demand) or [Linux](https://www.howtoforge.com/tutorial/docker-installation-and-usage-on-ubuntu-16.04/) ([MacOS](https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac)/[Ubuntu](https://www.howtoforge.com/tutorial/docker-installation-and-usage-on-ubuntu-16.04/) etc.), and verify the application is up and running
-	* Download the containers here
+	* Download the containers [here](https://pan.baidu.com/s/1slbVOYT)
 
 
 
 - **Usage (*agora-livebroadcast-nodejs*)**
-Load the downloaded image to local repository::
+	Load the downloaded image to local repository::
 
 		# docker load -i /path/to/images/agora-livebroadcast-nodejs.tar 
 		c01c63c6823d: Loading layer [==================================================>] 129.3 MB/129.3 MB
@@ -45,12 +45,12 @@ Load the downloaded image to local repository::
 		Loaded image: node:latest
 			Loaded image ID: sha256:b5145631b0646a42497dafbb975a8c182d5de3da52af745b430511a54c53f835
 		Loaded image ID: sha256:c1d02ac1d9b4de08d3a39fdacde10427d1c4d8505172d31dd2b4ef78048559f8
-Verify that image has been properly loaded:
+	Verify that image has been properly loaded:
 
 		# docker images
 		REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
 		agora/livebroadcast/nodejs   latest              b5145631b064        13 hours ago        688.3 MB
-Start the container, and browser to the host:port for testing :
+	Start the container, and browser to the host:port for testing :
 
 		# docker run -d -p /port number on host, i.e. 2333/:80 agora-livebroadcast-nodejs startlivebcdemo
 Verify the details of the running container and note the container is automatically named *"objective_borg"*:
@@ -58,31 +58,31 @@ Verify the details of the running container and note the container is automatica
 		#docker ps
 		CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
 		550c63477ab8        c1d02ac1d9b4        "bash"                   26 hours ago        Exited (0) 24 hours ago                         objective_borg
-Change app ID and certificate:
+	Change app ID and certificate:
 
 		# docker exec objective_borg changeappid /replace with app id/
 		# docker exec objective_borg changeappcert /replace with app cert/
-Restart the container for the new ID and certificate to take effect:
+	Restart the container for the new ID and certificate to take effect:
 
 		# docker restart objective_borg
-Start or stop an existing container
+	Start or stop an existing container
 
 		# docker stop objective_borg
 		# docker start objective_borg
-Access the shell of the container
+	Access the shell of the container
 
 		# docker exec -it objective_borg bash
 
 - **Usage (*agora-recording-linux*) **
-Load the downloaded image:
+	Load the downloaded image:
 
 		# docker load -i /path/to/images/agora-recording-linux.tar 
-Verify that image has been properly loaded:
+	Verify that image has been properly loaded:
 
 		# docker images
 		REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
 		agora/recording/linux   latest              7d145631t233        13 hours ago        636 MB
-Start the image and run the recording executables:
+	Start the image and run the recording executables:
 
 		# docker run -it  -v /tmp/recording:/tmp/recording agora/recording/linux bash
 		# Recorder_local 
@@ -109,14 +109,15 @@ Start the image and run the recording executables:
            --cfgFilePath           (config file path/option_)
 
 - **Usage (*agora-recording-linux*) **
-Load the downloaded image to local repository:
+	Load the downloaded image to local repository:
 
 		# docker load -i /path/to/images/agora-webrtc-nginx.tar
-Same as *agora-livebroadcast-nodejs* for rest of steps
+	Same as *agora-livebroadcast-nodejs* for rest of steps
 
 - **Version History**
 	* 2017/12/06 - 1.0
 		+ initial release 
+
 
 
 

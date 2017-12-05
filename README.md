@@ -48,16 +48,8 @@ Load the downloaded image to local repository::
 Verify that image has been properly loaded:
 
 		# docker images
-
-		REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-		node                latest              b5145631b064        13 hours ago        688.3 MB
-Optional: change the name of image to distinguish from offical Node.js image
-
-		# docker tag node agora-livebroadcast-nodejs
-		# docker rmi node  
-		# docker images
 		REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
-		agora-livebroadcast-nodejs   latest              b5145631b064        13 hours ago        688.3 MB
+		agora/livebroadcast/nodejs   latest              b5145631b064        13 hours ago        688.3 MB
 Start the container, and browser to the host:port for testing :
 
 		# docker run -d -p /port number on host, i.e. 2333/:80 agora-livebroadcast-nodejs startlivebcdemo
@@ -85,6 +77,11 @@ Access the shell of the container
 Load the downloaded image:
 
 		# docker load -i /path/to/images/agora-recording-linux.tar 
+Verify that image has been properly loaded:
+
+		# docker images
+		REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+		agora/recording/linux   latest              7d145631t233        13 hours ago        636 MB
 Start the image and run the recording executables:
 
 		# docker run -it  -v /tmp/recording:/tmp/recording agora/recording/linux bash

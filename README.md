@@ -82,7 +82,8 @@
 			# docker load -i /path/to/images/agora-dynamickeyserver-nodejs.tar 
 	* Fire up the container with desired app id and certificate:
 
-			# docker run -d -p /port number on host, i.e. 23333/:80 agora/dynamickeyserver/nodejs generatedynamickey /app_id string/ /app_cert string/
+			# docker run -d -p /port number on host, i.e. 23333/:8080 agora/dynamickeyserver/nodejs generatedynamickey /app_id string/ /app_cert string/
+
  	* Obtain dynamic key via HTTP Get on: _localhost:/port/channel_key?uid="userid"&channel="channelname"_
 		![enter image description here](http://i67.tinypic.com/ilzvwy.png)
 	* Start an existing container, and assign app id and certificate:

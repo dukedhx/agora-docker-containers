@@ -53,6 +53,7 @@
 	* Start the container, and browser to the host:port for testing :
 
 			# docker run -d -p /port number on host, i.e. 2333/:80 agora-livebroadcast-nodejs startlivebcdemo
+
 			![enter image description here](http://i67.tinypic.com/2952req.png)
 	* Verify the details of the running container and note the container is automatically named *"objective_borg"*:
 

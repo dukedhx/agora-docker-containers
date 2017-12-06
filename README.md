@@ -52,7 +52,8 @@
 			agora/livebroadcast/nodejs   latest              b5145631b064        13 hours ago        688.3 MB
 	* Start the container, and browser to the host:port for testing :
 
-			# docker run -d -p /port number on host, i.e. 2333/:80 agora-livebroadcast-nodejs startlivebcdemo
+		# docker run -d -p /port number on host, i.e. 2333/:80 agora-livebroadcast-nodejs startlivebcdemo
+	![enter image description here](http://i67.tinypic.com/2952req.png)
 	* Verify the details of the running container and note the container is automatically named *"objective_borg"*:
 
 			#docker ps
@@ -112,7 +113,34 @@
 	* Load the downloaded image to local repository:
 
 			# docker load -i /path/to/images/agora-webrtc-nginx.tar
-	* Same as *agora-livebroadcast-nodejs* for rest of steps
+	* Start the container, and browser to the host:port for testing :
+
+			# docker run -d -p /port number on host, i.e. 2333/:80 agora/webrtc/nginx changeappid /appid string/
+
+- **Set App ID/Certificate**
+	
+		#docker exec /name of container/ changeappid /appid string/
+		#docker exec /name of container/ changeappcert /appcert string/
+
+- **Update SDK or import application**
+	* agora-webrtc-nginx
+	
+			/* start the container */
+			#docker cp /path/to/Agora-SDK/ "name of container":/usr/share/nginx/html
+	* agora-livebroadcast-nodejs
+	
+			/* start the container */
+			#docker cp /path/to/nodejs-app/ "name of container":/home/
+			#docker exec -it "name of container" bash
+			#nodejs /home/path/to/nodejs-app/
+	* agora-recording-linux
+
+			/* start the container */
+			#docker cp  /path/to/agora-sdk/ "name of container':/home/
+			#docker exec -it "name of container" bash
+			#cd /home/path/to/agora-sdk/
+			#make
+
 
 - **Version History**
 	* 2017/12/06 - 1.0

@@ -11,15 +11,15 @@
 
 
 - **Containers**
-	* [agora-recording-linux](https://pan.baidu.com/s/1c15m4Oo)/ Repository [here](https://hub.docker.com/r/dukedhx/agora-recording-linux/)
+	* [agora-recording-linux](https://pan.baidu.com/s/1c15m4Oo)( [Repository](https://hub.docker.com/r/dukedhx/agora-recording-linux/) )
 	
 			CentOS 6.6, C Dev Tools, Agora Recording SDK and its compiled executable
 		 
-	* [agora-livebroadcast-nodejs](https://pan.baidu.com/s/1o7DF31C) / Repository [here](https://hub.docker.com/r/dukedhx/agora-livebroadcast-nodejs/)
+	* [agora-livebroadcast-nodejs](https://pan.baidu.com/s/1o7DF31C) ( [Repository](https://hub.docker.com/r/dukedhx/agora-livebroadcast-nodejs/) )
 	
 			Node.js, Express.js, Agora WebRTC SDK, WebRTC Live Broadcast Demo
 			
-	* [agora-webrtc-nginx](https://pan.baidu.com/s/1hss3nrI) / Repository [here](https://hub.docker.com/r/dukedhx/agora-webrtc-nginx/)
+	* [agora-webrtc-nginx](https://pan.baidu.com/s/1hss3nrI) ( [Repository](https://hub.docker.com/r/dukedhx/agora-webrtc-nginx/) )
 	
 			Nginx, Agora WebRTC SDK, WebRTC Communication Demo
 
@@ -109,7 +109,7 @@
            		--getVideoFrame          (default 0 (0:save as file, 1:get framebuffer) /option)
            -		-cfgFilePath           (config file path/option_)
 
-- **Usage (*agora-recording-linux*)**
+- **Usage (*agora-webrtc-nginx*)**
 	* Load the downloaded image to local repository:
 
 			# docker load -i /path/to/images/agora-webrtc-nginx.tar

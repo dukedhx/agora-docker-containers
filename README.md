@@ -23,11 +23,13 @@
 	
 			Nginx, Agora WebRTC SDK, WebRTC Communication Demo
 
+	* [agora-dynamickeyserver-nodejs](https://pan.baidu.com/s/1bKj7YY) ( [Repository](https://hub.docker.com/r/dukedhx/agora-dynamickeyserver-nodejs/) )
+	
+			Node.js, Express.js, Agora WebRTC SDK, Agora DynamicKey SDK, WebRTC Live Broadcast Demo, Agora Dynamic Key Server Demo
+
 - **Prerequisites**:
 	* Install [Docker](https://www.htpcbeginner.com/what-is-docker-docker-vs-virtualbox/) for [Windows](https://docs.docker.com/docker-for-windows/#shared-drives-on-demand) or [Linux](https://www.howtoforge.com/tutorial/docker-installation-and-usage-on-ubuntu-16.04/) ([MacOS](https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac)/[Ubuntu](https://www.howtoforge.com/tutorial/docker-installation-and-usage-on-ubuntu-16.04/) etc.), and verify the application is up and running
 	* Download the containers [here](https://pan.baidu.com/s/1slbVOYT) or pull from repository [here](https://hub.docker.com/r/dukedhx)
-
-
 
 - **Usage (*agora-livebroadcast-nodejs*)**
 	* Load the downloaded image to local repository::
@@ -73,6 +75,20 @@
 	* Access the shell of the container
 
 			# docker exec -it objective_borg bash
+
+- **Usage (*agora-dynamickeyserver-nodejs*)**
+	* Load the downloaded image to local repository:
+
+			# docker load -i /path/to/images/agora-dynamickeyserver-nodejs.tar 
+	* Fire up the container with desired app id and certificate:
+
+			# docker run -d -p /port number on host, i.e. 23333/:80 agora/dynamickeyserver/nodejs generatedynamickey /app_id string/ /app_cert string/
+ 	* Obtain dynamic key via HTTP Get on: _localhost:/port/channel_key?uid="userid"&channel="channelname"_
+		![enter image description here](http://i67.tinypic.com/ilzvwy.png)
+	* Start an existing container, and assign app id and certificate:
+
+			# docker start "name of container"
+			# docker exec -d "name of container" generatedynamickey /app_id string/ /app_cert string/
 
 - **Usage (*agora-recording-linux*)**
 	* Load the downloaded image:

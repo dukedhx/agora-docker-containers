@@ -11,21 +11,21 @@
 
 
 - **Containers**
-	* [agora-recording-linux](https://pan.baidu.com/s/1c15m4Oo)
+	* [agora-recording-linux](https://pan.baidu.com/s/1c15m4Oo)/ Repository [here](https://hub.docker.com/r/dukedhx/agora-recording-linux/)
 	
 			CentOS 6.6, C Dev Tools, Agora Recording SDK and its compiled executable
 		 
-	* [agora-livebroadcast-nodejs](https://pan.baidu.com/s/1o7DF31C)
+	* [agora-livebroadcast-nodejs](https://pan.baidu.com/s/1o7DF31C) / Repository [here](https://hub.docker.com/r/dukedhx/agora-livebroadcast-nodejs/)
 	
 			Node.js, Express.js, Agora WebRTC SDK, WebRTC Live Broadcast Demo
 			
-	* [agora-webrtc-nginx](https://pan.baidu.com/s/1hss3nrI)
+	* [agora-webrtc-nginx](https://pan.baidu.com/s/1hss3nrI) / Repository [here](https://hub.docker.com/r/dukedhx/agora-webrtc-nginx/)
 	
 			Nginx, Agora WebRTC SDK, WebRTC Communication Demo
 
 - **Prerequisites**:
 	* Install [Docker](https://www.htpcbeginner.com/what-is-docker-docker-vs-virtualbox/) for [Windows](https://docs.docker.com/docker-for-windows/#shared-drives-on-demand) or [Linux](https://www.howtoforge.com/tutorial/docker-installation-and-usage-on-ubuntu-16.04/) ([MacOS](https://docs.docker.com/docker-for-mac/install/#install-and-run-docker-for-mac)/[Ubuntu](https://www.howtoforge.com/tutorial/docker-installation-and-usage-on-ubuntu-16.04/) etc.), and verify the application is up and running
-	* Download the containers [here](https://pan.baidu.com/s/1slbVOYT)
+	* Download the containers [here](https://pan.baidu.com/s/1slbVOYT) or pull from repository [here](https://hub.docker.com/r/dukedhx)
 
 
 

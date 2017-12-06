@@ -74,7 +74,7 @@
 
 			# docker exec -it objective_borg bash
 
-- **Usage (*agora-recording-linux*) **
+- **Usage (*agora-recording-linux*)**
 	* Load the downloaded image:
 
 			# docker load -i /path/to/images/agora-recording-linux.tar 
@@ -109,7 +109,7 @@
            		--getVideoFrame          (default 0 (0:save as file, 1:get framebuffer) /option)
            -		-cfgFilePath           (config file path/option_)
 
-- **Usage (*agora-recording-linux*) **
+- **Usage (*agora-recording-linux*)**
 	* Load the downloaded image to local repository:
 
 			# docker load -i /path/to/images/agora-webrtc-nginx.tar
